@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f2f0e9" />
+  <title>Two Sides — Engineer by day, DJ by night</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-mode="day">
+  <main class="page-shell">
+    <header class="topbar">
+      <a class="wordmark" href="#top" aria-label="Two Sides home"><span class="mark">P.</span><span>PERSONAL FREQUENCY</span></a>
+      <div class="top-note"><span class="live-dot"></span><span id="status">CURRENTLY IN DAY MODE</span></div>
+      <a class="contact-link" href="mailto:hello@example.com">SAY HELLO <span>↗</span></a>
+    </header>
+
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span><span id="eyebrow">THE BUILDER</span><span class="index">01 / 02</span></p>
+        <h1 id="hero-title" data-day="I build by day." data-night="I move you by night.">I build by day.</h1>
+        <p class="intro" id="intro">Software engineer, curious by default. I turn complex ideas into clear, useful things—one thoughtful line of code at a time.</p>
+        <div class="hero-actions">
+          <a class="primary-action" id="action" href="#about"><span id="action-label">EXPLORE MY WORK</span><span class="arrow">↘</span></a>
+          <span class="location"><span class="location-pin">⌖</span> BASED IN COLOMBO, LK</span>
+        </div>
+      </div>
+
+      <div class="visual" aria-label="Abstract artwork reflecting the current mode">
+        <div class="visual-top"><span id="visual-label">A LITTLE DAYLIGHT</span><span class="visual-coords">06°55' N&nbsp; 79°51' E</span></div>
+        <div class="sun-orbit orbit-one"></div><div class="sun-orbit orbit-two"></div>
+        <div class="sun"></div>
+        <div class="sound-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="visual-bottom"><span id="visual-caption">FOCUS / CRAFT / CURIOSITY</span><span>01—∞</span></div>
+        <span class="graphic-cross cross-a">+</span><span class="graphic-cross cross-b">+</span>
+      </div>
+
+      <div class="mode-switch-wrap">
+        <div class="mode-label"><span class="mode-icon">☼</span><span>DAY</span></div>
+        <button class="mode-switch" type="button" role="switch" aria-checked="false" aria-label="Switch to night mode" id="mode-switch"><span class="switch-thumb"><span class="switch-sun">☼</span><span class="switch-moon">☾</span></span></button>
+        <div class="mode-label night-label"><span class="mode-icon">☾</span><span>NIGHT</span></div>
+        <span class="switch-hint">FLIP THE SWITCH</span>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="A little about me"><span data-day-only>ENGINEER</span><b data-day-only>✳</b><span data-night-only hidden>SELECTOR</span><b data-night-only hidden>✳</b><span data-day-only>THOUGHTFUL BY DESIGN</span><b>✳</b><span data-night-only hidden>GOOD ENERGY ONLY</span><b>✳</b><span data-day-only>ENGINEER</span><b data-day-only>✳</b><span data-night-only hidden>SELECTOR</span></section>
+
+    <section class="about" id="about">
+      <div class="about-heading"><p class="section-tag" id="about-tag">01 — THE ENGINEER</p><p class="about-aside" id="about-aside">I turn complex ideas into clear, useful digital experiences.</p></div>
+      <div class="side-cards">
+        <article class="side-card day-card" data-day-only><span class="card-number">01</span><span class="card-icon">⌘</span><p class="card-label">WHEN THE SUN'S UP</p><h2>Solving things<br>with software.</h2><p class="card-description">I work at the intersection of logic and imagination, making digital experiences that feel simple, useful, and human.</p><a href="mailto:hello@example.com" class="card-link">LET'S BUILD SOMETHING <span>↗</span></a></article>
+        <article class="side-card night-card" data-night-only hidden><span class="card-number">02</span><span class="card-icon">♫</span><p class="card-label">WHEN THE LIGHTS GO LOW</p><h2>Finding the<br>right frequency.</h2><p class="card-description">Behind the decks, I read the room, join the dots between genres, and build a moment worth staying out for.</p><a href="mailto:hello@example.com" class="card-link">BOOK A SET <span>↗</span></a></article>
+      </div>
+    </section>
+
+    <footer><a class="wordmark" href="#top"><span class="mark">P.</span><span>PERSONAL FREQUENCY</span></a><span>MADE WITH INTENTION, IN COLOMBO</span><span>© <span id="year"></span> — ALL HOURS, ALL HEART.</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
