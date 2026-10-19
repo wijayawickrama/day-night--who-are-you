@@ -3,7 +3,7 @@ const body = document.body;
 const copy = {
   day: {
     status: 'CURRENTLY IN DAY MODE', eyebrow: 'THE IFS TECHNICAL CONSULTANT', intro: 'IFS Technical Consultant with 6+ years of experience. Work spans IFS Applications 7–10 and IFS Cloud 25R2.',
-    action: 'EXPLORE MY WORK', actionTarget: 'work.html', visual: 'A LITTLE DAYLIGHT', caption: 'FOCUS / CRAFT / CURIOSITY', theme: '#f2f0e9'
+    action: 'EXPLORE MY WORK', actionTarget: 'pages/work.html', visual: 'A LITTLE DAYLIGHT', caption: 'FOCUS / CRAFT / CURIOSITY', theme: '#f2f0e9'
   },
   night: {
     status: 'CURRENTLY IN NIGHT MODE', eyebrow: 'THE SELECTOR', intro: 'DJ, listener, and collector of moments. I follow the feeling, find the groove, and bring a room together through sound.',
