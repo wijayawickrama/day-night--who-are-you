@@ -12,12 +12,14 @@
 </head>
 <body data-mode="day">
   <main class="page-shell">
+    <!-- Shared header: brand, current scene status, and contact link. -->
     <header class="topbar">
       <a class="wordmark" href="#top" aria-label="Two Sides home"><span class="mark">P.</span><span>PERSONAL FREQUENCY</span></a>
       <div class="top-note"><span class="live-dot"></span><span id="status">CURRENTLY IN DAY MODE</span></div>
       <a class="contact-link" href="mailto:hello@example.com">SAY HELLO <span>↗</span></a>
     </header>
 
+    <!-- Main introduction; its text changes when the day/night switch is used. -->
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow"><span class="eyebrow-line"></span><span id="eyebrow">THE IFS TECHNICAL CONSULTANT</span><span class="index">01 / 02</span></p>
@@ -29,6 +31,7 @@
         </div>
       </div>
 
+      <!-- Decorative artwork built from CSS shapes and a simple sound wave. -->
       <div class="visual" aria-label="Abstract artwork reflecting the current mode">
         <div class="visual-top"><span id="visual-label">A LITTLE DAYLIGHT</span><span class="visual-coords">06°55' N&nbsp; 79°51' E</span></div>
         <div class="sun-orbit orbit-one"></div><div class="sun-orbit orbit-two"></div>
@@ -38,6 +41,7 @@
         <span class="graphic-cross cross-a">+</span><span class="graphic-cross cross-b">+</span>
       </div>
 
+      <!-- The switch updates the page theme and introduction. -->
       <div class="mode-switch-wrap">
         <div class="mode-label"><span class="mode-icon">☼</span><span>DAY</span></div>
         <button class="mode-switch" type="button" role="switch" aria-checked="false" aria-label="Switch to night mode" id="mode-switch"><span class="switch-thumb"><span class="switch-sun">☼</span><span class="switch-moon">☾</span></span></button>

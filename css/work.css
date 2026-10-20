@@ -1,4 +1,5 @@
 body.work-document {
+  /* This page uses a calmer palette than the day/night home page. */
   --paper: #f5f7f8;
   --ink: #182d3c;
   --muted: #61727d;
@@ -37,6 +38,7 @@ body.work-document {
   color: var(--ink);
 }
 
+/* Profile introduction and the experience summary badge. */
 .work-page .work-hero {
   padding: 32px 0 58px;
   border-color: var(--line);
@@ -132,6 +134,7 @@ body.work-document {
   font-size: 12px;
 }
 
+/* Shared spacing and typography for the work and education sections. */
 .work-page .work-section {
   padding: 56px 0 62px;
   border-color: var(--line);
@@ -155,6 +158,7 @@ body.work-document {
   max-width: 250px;
 }
 
+/* Cards describing IFS Applications and IFS Cloud experience. */
 .work-page .platform-grid {
   gap: 16px;
 }
@@ -222,6 +226,7 @@ body.work-document {
   font-size: 10px;
 }
 
+/* Project coordination responsibilities displayed beside their descriptions. */
 .work-page .coordination-entry {
   grid-template-columns: minmax(220px, .72fr) minmax(0, 1.28fr);
   gap: 38px;
@@ -279,6 +284,7 @@ body.work-document {
   line-height: 1.7;
 }
 
+/* Education card and footer layout. */
 .work-page .education-section {
   border-bottom: 0;
 }
@@ -335,6 +341,7 @@ body.work-document {
   color: var(--ink);
 }
 
+/* Stack columns and reduce spacing on tablets and smaller screens. */
 @media (max-width: 760px) {
   .work-page {
     padding-inline: 6%;
@@ -379,6 +386,7 @@ body.work-document {
   }
 }
 
+/* Use a single column for the smallest screens. */
 @media (max-width: 520px) {
   .work-page .topbar {
     height: 68px;
