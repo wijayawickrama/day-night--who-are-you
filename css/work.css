@@ -226,6 +226,76 @@ body.work-document {
   font-size: 10px;
 }
 
+.work-page .version-projects {
+  margin-top: 26px;
+  border-top: 1px solid var(--line);
+}
+
+.work-page .version-project-group {
+  padding: 18px 0 4px;
+  border-bottom: 1px solid var(--line);
+}
+
+.work-page .version-project-group h4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 10px;
+  color: var(--ink);
+  font: 500 11px 'DM Mono', monospace;
+  letter-spacing: .06em;
+}
+
+.work-page .version-project-group h4 span {
+  color: var(--muted);
+  font-size: 8px;
+  letter-spacing: .1em;
+}
+
+.work-page .version-project-group ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0 0 14px;
+  padding: 0;
+  list-style: none;
+}
+
+.work-page .version-project-group li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #e1e8ea;
+  border-radius: 3px;
+  background: #f7f9fa;
+}
+
+.work-page .version-project-group li strong {
+  color: var(--ink);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.work-page .version-project-group li a {
+  color: inherit;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 2px;
+}
+
+.work-page .version-project-group li a:hover {
+  color: #527b79;
+}
+
+.work-page .version-project-group li span {
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+
 /* Project coordination responsibilities displayed beside their descriptions. */
 .work-page .coordination-entry {
   grid-template-columns: minmax(220px, .72fr) minmax(0, 1.28fr);
@@ -437,6 +507,10 @@ body.work-document {
   .work-page .platform-card,
   .work-page .coordination-entry {
     padding: 22px;
+  }
+
+  .work-page .version-project-group ul {
+    grid-template-columns: 1fr;
   }
 
   .work-page .coordination-duties {
