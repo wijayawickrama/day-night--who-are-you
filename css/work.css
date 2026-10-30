@@ -1,11 +1,11 @@
 body.work-document {
   /* This page uses a calmer palette than the day/night home page. */
-  --paper: #f5f7f8;
-  --ink: #182d3c;
-  --muted: #61727d;
-  --accent: #789d99;
-  --accent-soft: #e7efee;
-  --line: #d9e1e5;
+  --paper: #faf8fc;
+  --ink: #24182d;
+  --muted: #756a7e;
+  --accent: #8427e2;
+  --accent-soft: #f0e7fb;
+  --line: #e6ddec;
   --card: #fff;
   background: var(--paper);
   color: var(--ink);
@@ -87,7 +87,7 @@ body.work-document {
 }
 
 .work-page .work-hero h1 em {
-  color: #527b79;
+  color: #6b25a8;
   font-family: Georgia, serif;
   font-weight: 400;
 }
@@ -107,7 +107,7 @@ body.work-document {
   border-left: 3px solid var(--accent);
   border-radius: 5px;
   background: #fff;
-  box-shadow: 0 8px 24px rgba(24, 45, 60, .045);
+  box-shadow: 0 8px 24px rgba(54, 0, 101, .06);
   color: var(--ink);
   flex-direction: row;
   justify-content: flex-start;
@@ -170,7 +170,7 @@ body.work-document {
   border-top: 2px solid var(--accent);
   border-radius: 5px;
   background: var(--card);
-  box-shadow: 0 8px 24px rgba(24, 45, 60, .035);
+  box-shadow: 0 8px 24px rgba(54, 0, 101, .045);
 }
 
 .work-page .platform-card::after {
@@ -219,10 +219,10 @@ body.work-document {
 
 .work-page .work-capabilities li {
   padding: 7px 9px;
-  border: 1px solid #e1e8ea;
+  border: 1px solid var(--line);
   border-radius: 3px;
-  background: #f7f9fa;
-  color: #354b58;
+  background: var(--paper);
+  color: var(--ink);
   font-size: 10px;
 }
 
@@ -268,9 +268,9 @@ body.work-document {
   gap: 4px;
   min-width: 0;
   padding: 10px;
-  border: 1px solid #e1e8ea;
+  border: 1px solid var(--line);
   border-radius: 3px;
-  background: #f7f9fa;
+  background: var(--paper);
 }
 
 .work-page .version-project-group li strong {
@@ -287,7 +287,7 @@ body.work-document {
 }
 
 .work-page .version-project-group li a:hover {
-  color: #527b79;
+  color: #6b25a8;
 }
 
 .work-page .version-project-group li span {
@@ -306,7 +306,7 @@ body.work-document {
   border-left: 3px solid var(--accent);
   border-radius: 5px;
   background: #fff;
-  box-shadow: 0 8px 24px rgba(24, 45, 60, .035);
+  box-shadow: 0 8px 24px rgba(54, 0, 101, .045);
 }
 
 .work-page .coordination-intro .card-label {
@@ -338,7 +338,7 @@ body.work-document {
 }
 
 .work-page .duty-number {
-  color: #527b79;
+  color: #6b25a8;
   font-size: 8px;
 }
 
@@ -366,7 +366,7 @@ body.work-document {
   border: 1px solid var(--line);
   border-radius: 5px;
   background: #fff;
-  box-shadow: 0 8px 24px rgba(24, 45, 60, .035);
+  box-shadow: 0 8px 24px rgba(54, 0, 101, .045);
 }
 
 .work-page .degree-mark {
@@ -409,6 +409,18 @@ body.work-document {
 
 .work-page footer .wordmark {
   color: var(--ink);
+}
+
+.work-page .work-footer-instagram {
+  color: var(--muted);
+  font: 9px 'DM Mono', monospace;
+  letter-spacing: .1em;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.work-page .work-footer-instagram:hover {
+  color: var(--accent);
 }
 
 /* Stack columns and reduce spacing on tablets and smaller screens. */
@@ -535,10 +547,15 @@ body.work-document {
 
   .work-page footer {
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .work-page footer .work-footer-link {
     display: none;
+  }
+
+  .work-page footer > span:last-child {
+    width: 100%;
   }
 }
 

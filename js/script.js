@@ -13,7 +13,7 @@ const copy = {
     actionTarget: 'pages/work.html',
     visual: 'A LITTLE DAYLIGHT',
     caption: 'FOCUS / CRAFT / CURIOSITY',
-    theme: '#f2f0e9'
+    theme: '#faf8fc'
   },
   night: {
     status: 'CURRENTLY IN NIGHT MODE',
@@ -23,7 +23,7 @@ const copy = {
     actionTarget: 'pages/night.html',
     visual: 'AFTER HOURS',
     caption: 'RHYTHM / FEELING / CONNECTION',
-    theme: '#111419'
+    theme: '#100d18'
   }
 };
 

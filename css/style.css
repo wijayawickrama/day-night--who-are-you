@@ -1,17 +1,17 @@
 /* Global colors, fonts, and default page settings. */
 :root {
   font-family:Manrope, sans-serif;
-  color:#20231f;
-  background:#f2f0e9;
+  color:#24182d;
+  background:#faf8fc;
   font-synthesis:none;
   text-rendering:optimizeLegibility;
-  --paper:#f2f0e9;
-  --ink:#20231f;
-  --muted:#787b72;
-  --accent:#c5ef55;
-  --line:rgba(32,35,31,.16);
-  --card:#e9e7de;
-  --visual:#dce4c8;
+  --paper:#faf8fc;
+  --ink:#24182d;
+  --muted:#756a7e;
+  --accent:#8427e2;
+  --line:rgba(54,0,101,.15);
+  --card:#f1edf5;
+  --visual:#eee7f5;
   transition:background .5s,color .5s
 }
 
@@ -31,13 +31,13 @@ body {
 }
 
 body[data-mode=night] {
-  --paper:#111419;
-  --ink:#f1efe8;
-  --muted:#a1a49f;
-  --accent:#c5ef55;
-  --line:rgba(241,239,232,.18);
-  --card:#1d2229;
-  --visual:#272530
+  --paper:#100d18;
+  --ink:#f5f0fa;
+  --muted:#aaa0b7;
+  --accent:#c391ff;
+  --line:rgba(245,240,250,.14);
+  --card:#1b1625;
+  --visual:#241a31
 }
 
 /* Shared page width and header layout. */
@@ -87,9 +87,9 @@ body[data-mode=night] {
 .live-dot {
   width:6px;
   height:6px;
-  background:#85a936;
+  background:var(--accent);
   border-radius:50%;
-  box-shadow:0 0 0 3px #85a93625
+  box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 18%,transparent)
 }
 
 .contact-link {
@@ -167,8 +167,8 @@ h1 em {
 
 .primary-action {
   height:49px;
-  background:var(--ink);
-  color:var(--paper);
+  background:var(--accent);
+  color:#fff;
   text-decoration:none;
   display:flex;
   align-items:center;
@@ -196,6 +196,28 @@ h1 em {
 .location-pin {
   font-size:15px;
   margin-right:5px
+}
+
+.home-contact-links {
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  margin-top:18px
+}
+
+.home-contact-links a {
+  padding-bottom:4px;
+  border-bottom:1px solid var(--line);
+  color:var(--muted);
+  text-decoration:none;
+  font:9px 'DM Mono',monospace;
+  letter-spacing:.06em;
+  transition:color .2s,border-color .2s
+}
+
+.home-contact-links a:hover {
+  color:var(--accent);
+  border-color:var(--accent)
 }
 
 /* CSS artwork: orbit rings, sun, and sound wave. */
@@ -236,7 +258,7 @@ h1 em {
   left:50%;
   top:43%;
   transform:translate(-50%,-50%);
-  box-shadow:0 0 70px #c5ef5540;
+  box-shadow:0 0 70px color-mix(in srgb,var(--accent) 25%,transparent);
   transition:all .7s
 }
 
@@ -411,6 +433,10 @@ body[data-mode=night] .switch-moon {
   display:block
 }
 
+body[data-mode=night] .primary-action {
+  color:#17111f
+}
+
 .switch-hint {
   margin-left:8px;
   font:9px 'DM Mono',monospace;
@@ -434,7 +460,7 @@ body[data-mode=night] .switch-moon {
 }
 
 .ticker b {
-  color:#92b33d;
+  color:var(--accent);
   font-size:15px;
   font-weight:400
 }
@@ -499,7 +525,7 @@ body[data-mode=night] .switch-moon {
 
 .card-icon {
   font-size:21px;
-  color:#87a938
+  color:var(--accent)
 }
 
 .card-label {
@@ -561,27 +587,27 @@ footer .mark {
 
 /* Color and artwork changes for night mode. */
 body[data-mode=night] .sun {
-  background:#e9d393;
-  box-shadow:0 0 95px #9d7ef280;
+  background:#c391ff;
+  box-shadow:0 0 95px #9e68e887;
   width:130px;
   height:130px
 }
 
 body[data-mode=night] .visual {
-  background:radial-gradient(ellipse at 52% 40%,#3c3651 0%,#262632 43%,#1c2028 100%)
+  background:radial-gradient(ellipse at 52% 40%,#39264e 0%,#241a31 43%,#15121d 100%)
 }
 
 body[data-mode=night] .sound-wave i {
-  background:#c5ef55;
+  background:#c391ff;
   opacity:.65
 }
 
 body[data-mode=night] .orbit-one,body[data-mode=night] .orbit-two {
-  border-color:#efead52c
+  border-color:#e9d7ff30
 }
 
 body[data-mode=night] .ticker b {
-  color:#c5ef55
+  color:#c391ff
 }
 
 body[data-mode=night] .side-cards {
@@ -1002,7 +1028,7 @@ body[data-mode=night] .switch-thumb {
 
 .version-line i {
   font:normal 24px Manrope,sans-serif;
-  color:#8fa943;
+  color:var(--accent);
   margin:0 3px
 }
 
@@ -1086,7 +1112,7 @@ body[data-mode=night] .switch-thumb {
 
 .duty-number {
   font:9px 'DM Mono',monospace;
-  color:#87a938;
+  color:var(--accent);
   padding-top:3px
 }
 
