@@ -733,6 +733,200 @@ body[data-mode=night] .side-cards {
 
 }
 
+/* Home page: quieter colors and an editorial day/night treatment. */
+body.home-document {
+  --paper: #f3f0e7;
+  --ink: #24251f;
+  --muted: #77796e;
+  --accent: #68745c;
+  --line: rgba(36, 37, 31, .17);
+  --card: #e7e5d9;
+  --visual: #e7e5d9;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body.home-document[data-mode="night"] {
+  --paper: #171914;
+  --ink: #eee8d9;
+  --muted: #a7a594;
+  --accent: #d87950;
+  --line: rgba(238, 232, 217, .17);
+  --card: #20221b;
+  --visual: #22241d;
+}
+
+.home-document[data-mode="night"] .visual {
+  background: var(--visual);
+}
+
+.home-document .topbar {
+  height: 78px;
+  letter-spacing: .14em;
+}
+
+.home-document .mark {
+  width: 31px;
+  height: 31px;
+  border-radius: 0;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+}
+
+.home-document .live-dot {
+  box-shadow: none;
+}
+
+.home-document .hero {
+  min-height: 650px;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, .82fr);
+  gap: 8%;
+  padding: 65px 0 68px;
+}
+
+.home-document .hero-copy {
+  padding: 0 0 38px;
+}
+
+.home-document .eyebrow,
+.home-document .location,
+.home-document .home-contact-links a {
+  letter-spacing: .1em;
+}
+
+.home-document h1 {
+  max-width: 650px;
+  margin: 27px 0 22px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(58px, 6.6vw, 88px);
+  font-weight: 400;
+  line-height: .99;
+  letter-spacing: -.055em;
+}
+
+.home-document .intro {
+  max-width: 440px;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.home-document .primary-action {
+  min-height: 50px;
+  height: auto;
+  padding: 0 18px;
+  background: var(--ink);
+  color: var(--paper);
+  transition: background .25s, transform .25s;
+}
+
+.home-document .primary-action:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+
+.home-document .visual {
+  height: min(39vw, 470px);
+  min-height: 350px;
+  background: var(--visual);
+  border: 1px solid var(--line);
+}
+
+.home-document .visual::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 12%;
+  right: 12%;
+  height: 1px;
+  background: var(--line);
+}
+
+.home-document .visual::after {
+  content: 'D / N';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0 18px;
+  background: var(--visual);
+  color: var(--accent);
+  font: italic clamp(74px, 9vw, 126px)/1 Georgia, 'Times New Roman', serif;
+  letter-spacing: -.08em;
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+}
+
+.home-document .visual-top,
+.home-document .visual-bottom {
+  font-size: 8px;
+  letter-spacing: .14em;
+}
+
+.home-document .sun-orbit,
+.home-document .sun,
+.home-document .sound-wave,
+.home-document .graphic-cross {
+  display: none;
+}
+
+.home-document .mode-switch-wrap {
+  gap: 11px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: none;
+}
+
+.home-document .mode-label,
+.home-document .switch-hint {
+  color: var(--muted);
+}
+
+.home-document .mode-switch {
+  width: 56px;
+  height: 30px;
+  background: var(--card);
+  border-color: var(--line);
+}
+
+.home-document .switch-thumb {
+  width: 22px;
+  height: 22px;
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.home-document[data-mode="night"] .switch-thumb {
+  transform: translateX(25px);
+}
+
+.home-document .mode-switch:hover,
+.home-document .mode-switch:focus-visible {
+  outline-color: var(--accent);
+}
+
+@media (max-width: 760px) {
+  .home-document .hero {
+    min-height: 0;
+    padding: 48px 0 86px;
+    gap: 28px;
+  }
+
+  .home-document .hero-copy { padding: 0; }
+  .home-document h1 { font-size: clamp(54px, 11vw, 76px); }
+  .home-document .visual { height: 320px; min-height: 0; }
+  .home-document .mode-switch-wrap { bottom: 20px; }
+}
+
+@media (max-width: 390px) {
+  .home-document .visual { height: 270px; }
+  .home-document .switch-hint { display: none; }
+}
+
 /* Respect visitors who ask for less animation. */
 @media(prefers-reduced-motion:reduce) {
   *,*:before,*:after {
