@@ -578,3 +578,72 @@ body.work-document {
 .work-page .coordination-duties h4 {
   font-size: 14px;
 }
+
+.work-page .work-hero-grid {
+  grid-template-columns: minmax(0, 1fr) 250px;
+  align-items: start;
+}
+
+.work-hero-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+  margin-top: -24px;
+}
+
+.ifs-logo-panel {
+  width: 100%;
+  height: 145px;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--paper);
+  background: var(--paper);
+}
+
+.ifs-logo-panel img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.experience-highlight {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.experience-highlight strong {
+  color: var(--accent);
+  font-size: 43px;
+  line-height: .9;
+  letter-spacing: -.08em;
+}
+
+.experience-highlight span {
+  color: var(--muted);
+  font: 9px 'DM Mono', monospace;
+  line-height: 1.5;
+  letter-spacing: .1em;
+}
+
+@media(max-width:760px) {
+  .work-page .work-hero-grid {
+    grid-template-columns: minmax(0, 1fr) 190px;
+  }
+
+  .ifs-logo-panel { height: 110px; }
+}
+
+@media(max-width:390px) {
+  .work-page .work-hero-grid {
+    grid-template-columns: minmax(0, 1fr) 125px;
+  }
+
+  .ifs-logo-panel { height: 78px; padding: 8px; }
+  .work-hero-aside { gap: 30px; }
+  .experience-highlight { gap: 9px; }
+  .experience-highlight strong { font-size: 34px; }
+  .experience-highlight span { font-size: 7px; }
+}

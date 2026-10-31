@@ -495,3 +495,113 @@ body.night-document {
   .night-footer { justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 17px 0; }
   .night-footer > span { width: 100%; }
 }
+
+/* Night page: a warmer, record-room feel. */
+body.night-document {
+  --paper: #171914;
+  --ink: #eee8d9;
+  --muted: #a7a594;
+  --accent: #d87950;
+  --line: rgba(238, 232, 217, .17);
+  --card: #20221b;
+  --visual: #25261e;
+  background: var(--paper);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.night-page h1,
+.night-page h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  letter-spacing: -.045em;
+}
+
+.night-page h1 em,
+.night-page h2 em {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.night-page .night-hero {
+  min-height: 590px;
+}
+
+.night-page .night-hero h1 {
+  font-size: clamp(58px, 7.4vw, 96px);
+  line-height: .98;
+}
+
+.night-page .night-lead,
+.night-page .journey-copy p,
+.night-page .sound-card-copy > p:last-child,
+.night-page .night-contact > p:not(.section-tag) {
+  color: #c0bdad;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.night-page .night-cta {
+  background: var(--accent);
+  color: #171914;
+  border-radius: 0;
+  font-weight: 600;
+}
+
+.night-page .night-cta:hover {
+  background: #e58b62;
+}
+
+.night-page .night-art {
+  min-height: 0;
+  max-height: 620px;
+  aspect-ratio: 4 / 5;
+  border: 0;
+  border-radius: 0;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(215, 121, 80, .08), transparent 55%),
+    #22241d;
+}
+
+.night-page .night-portrait {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 34%;
+}
+
+.night-page .night-art::after {
+  content: none;
+}
+
+.night-page .night-section-heading .section-tag,
+.night-page .eyebrow,
+.night-page .section-number,
+.night-page .card-label {
+  letter-spacing: .08em;
+}
+
+.night-page .sound-card,
+.night-page .mix-card,
+.night-page .night-contact-links a {
+  border-radius: 0;
+}
+
+.night-page .sound-card {
+  border-left-width: 3px;
+}
+
+.night-page .mix-card {
+  border-color: rgba(238, 232, 217, .12);
+}
+
+.night-page .mix-play {
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.night-page .night-contact-links a:hover {
+  background: rgba(215, 121, 80, .1);
+}
+
