@@ -11,7 +11,47 @@ body.work-document {
   color: var(--ink);
 }
 
+/* A quiet stream of code gives the work page a little technical movement. */
+.work-code-bg {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  color: #8427e2;
+  opacity: .25;
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 10%, #000 90%, transparent);
+  mask-image: linear-gradient(180deg, transparent, #000 10%, #000 90%, transparent);
+}
+
+.work-code-stream {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-content: space-evenly;
+  min-height: 100vh;
+  gap: 0 5vw;
+  padding: 4vh 4vw;
+  font: 13px/1.6 'DM Mono', monospace;
+  white-space: nowrap;
+  animation: code-drift 34s linear infinite;
+}
+
+.work-code-stream span:nth-child(2n) {
+  padding-left: 24px;
+}
+
+.work-code-stream span:nth-child(3n) {
+  padding-left: 10px;
+}
+
+@keyframes code-drift {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+
 .work-page {
+  position: relative;
+  z-index: 1;
   max-width: 1180px;
   padding-inline: 5.5%;
 }
@@ -425,6 +465,13 @@ body.work-document {
 
 /* Stack columns and reduce spacing on tablets and smaller screens. */
 @media (max-width: 760px) {
+  .work-code-stream {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 8vw;
+    padding-inline: 5vw;
+    font-size: 11px;
+  }
+
   .work-page {
     padding-inline: 6%;
   }
@@ -465,6 +512,12 @@ body.work-document {
     width: 56px;
     height: 56px;
     font-size: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .work-code-stream {
+    animation: none;
   }
 }
 
