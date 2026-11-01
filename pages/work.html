@@ -13,6 +13,42 @@
   <link rel="stylesheet" href="../css/work.css" />
 </head>
 <body class="work-document" data-mode="day">
+  <div class="work-code-bg" aria-hidden="true">
+    <div class="work-code-stream">
+      <span>DECLARE</span>
+      <span>  v_employee_id NUMBER := 1001;</span>
+      <span>BEGIN</span>
+      <span>  DBMS_OUTPUT.PUT_LINE('Hello, PL/SQL');</span>
+      <span>END;</span>
+      <span>/</span>
+      <span>SELECT employee_id, first_name</span>
+      <span>  INTO v_employee_id, v_name</span>
+      <span>  FROM employees</span>
+      <span> WHERE employee_id = p_employee_id;</span>
+      <span>CREATE OR REPLACE PROCEDURE process_order (</span>
+      <span>  p_order_id IN NUMBER</span>
+      <span>) IS</span>
+      <span>BEGIN</span>
+      <span>  order_api.process_order(p_order_id);</span>
+      <span>EXCEPTION</span>
+      <span>  WHEN NO_DATA_FOUND THEN</span>
+      <span>    DBMS_OUTPUT.PUT_LINE('No matching row');</span>
+      <span>END process_order;</span>
+      <span>/</span>
+      <span>FOR rec_ IN get_orders LOOP</span>
+      <span>  process_order(rec_.order_id);</span>
+      <span>END LOOP;</span>
+      <span>COMMIT;</span>
+      <span>ROLLBACK TO savepoint_before_update;</span>
+      <span>CURSOR c_orders IS SELECT * FROM customer_order;</span>
+      <span>FETCH c_orders INTO order_rec;</span>
+      <span>CLOSE c_orders;</span>
+      <span>EXCEPTION WHEN OTHERS THEN</span>
+      <span>  RAISE_APPLICATION_ERROR(-20001, SQLERRM);</span>
+      <span>END;</span>
+      <span>/</span>
+    </div>
+  </div>
   <main class="page-shell work-page">
     <!-- Header links this page back to the main profile. -->
     <header class="topbar">
