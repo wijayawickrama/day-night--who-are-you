@@ -45,6 +45,9 @@ body.night-document {
   transition: color .2s ease;
 }
 
+.night-nav .instagram-link { display: inline-flex; align-items: center; gap: 7px; }
+.instagram-icon { width: 15px; height: 15px; flex: 0 0 auto; }
+
 .night-nav a:hover,
 .night-footer-link:hover { color: var(--accent); }
 

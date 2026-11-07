@@ -2,7 +2,7 @@
 :root {
   font-family:Manrope, sans-serif;
   color:#24182d;
-  background:#faf8fc;
+  /* Let the body background paint the full canvas in both color modes. */
   font-synthesis:none;
   text-rendering:optimizeLegibility;
   --paper:#faf8fc;
