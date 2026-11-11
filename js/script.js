@@ -17,7 +17,7 @@ const copy = {
   },
   night: {
     status: 'CURRENTLY IN NIGHT MODE',
-    eyebrow: 'THE SELECTOR',
+    eyebrow: 'The DJ',
     intro: 'DJ, listener, and collector of moments. I follow the feeling, find the groove, and bring a room together through sound.',
     action: 'EXPLORE MY DJ JOURNEY',
     actionTarget: 'pages/night.html',
